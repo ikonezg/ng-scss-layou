@@ -1,0 +1,82 @@
+@import "../../../styles.scss";
+
+.navbar{
+    width: 5rem;
+    height: 100vh;
+    position: fixed;
+    background-color: $text-primary-color;
+    transition: .2s ease;
+    .logo{
+        transition: .2s ease;
+
+    }
+    
+}
+.navbar-nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.nav-item {
+    width: 100%;
+}
+
+.nav-item:last-child{
+    margin-top: auto;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    height: 5rem;
+    color: $background-secondary-color;
+    text-decoration: none;
+
+    fa-icon{
+        font-size: 2rem;
+        min-width: 1.5rem;
+        margin: 0 1.5rem;
+    }
+}
+
+.nav-link:hover {
+    color: $background-third-color;
+    transition: 0.5s;
+}
+
+
+.link-text {
+    display: none;
+}
+
+.navbar:hover{
+    width: 16rem;
+    transition: ease-in 300ms;
+    .link-text{
+        display: block;
+        animation: textAnimation 0ms 350ms forwards;
+        opacity: 0;
+    }
+    .logo{
+        transform: rotateY(-180deg);
+        transition: 300ms;
+    }
+}
+
+
+
+@keyframes textAnimation {
+    to {opacity: 1;}
+}
+
+.logo{
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    width: 100%;
+    
+}
